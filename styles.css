@@ -1,8 +1,233 @@
-nav {
-    display: flex;
-    align-items: space-between;
+body {
+  font-family: 'Titillium Web', sans-serif;
+  background: #0f1117;
+  color: #f5f5f5;
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
-    /* body {
-        background-color: black;
-    } */
+.navbar {
+  background: rgba(20, 22, 30, 0.95) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+  color: #00bfff !important;
+}
+
+.navbar-nav .nav-link {
+  color: #ccc !important;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #00bfff !important;
+}
+
+.hero-content {
+  padding: 80px 10%;
+  text-align: left;
+  animation: fadeIn 1.2s ease;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-content span {
+  color: #00bfff;
+}
+
+.hero-content p {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.skills .badge {
+  background: #1f232b;
+  border: 1px solid #00bfff;
+  margin-right: 8px;
+  margin-top: 5px;
+}
+
+.hero-buttons .btn-cyber,
+.btn-cyber {
+  background: linear-gradient(90deg, #00bfff, #0080ff);
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-cyber:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00bfff;
+}
+
+.btn-outline {
+  border: 1px solid #00bfff;
+  color: #00bfff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #00bfff;
+  color: #fff;
+}
+
+/* ==== Section Titles ==== */
+.section-title h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00bfff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.section-title p {
+  color: #bbb;
+}
+
+/* ==== About Section ==== */
+.about-block {
+  background: #1a1d26;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 191, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.about-block:hover {
+  border-color: #00bfff;
+  box-shadow: 0 0 10px #00bfff33;
+}
+
+.about-block-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.about-block-header i {
+  color: #00bfff;
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+/* ==== Tabs ==== */
+.nav-pills .nav-link {
+  color: #ccc;
+  background: transparent;
+  border: 1px solid #00bfff;
+  margin: 0 5px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+  background: #00bfff;
+  color: #fff;
+  box-shadow: 0 0 10px #00bfff88;
+}
+
+/* ==== Cards ==== */
+.card {
+  border: none;
+  background: #161a23;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00bfff44;
+}
+
+.card-title {
+  color: #00bfff;
+  font-weight: 700;
+}
+
+.btn-outline-light {
+  border-color: #00bfff;
+  color: #00bfff;
+}
+
+.btn-outline-light:hover {
+  background-color: #00bfff;
+  color: #fff;
+}
+
+/* ==== Contact Section ==== */
+.contact-box {
+  background: #161a23;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(0, 191, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.contact-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #00bfff55;
+}
+
+.contact-box i {
+  font-size: 2rem;
+  color: #00bfff;
+  margin-bottom: 10px;
+}
+
+form .form-control {
+  background: #0f1117;
+  border: 1px solid #333;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+form .form-control:focus {
+  border-color: #00bfff;
+  box-shadow: 0 0 5px #00bfff44;
+  background: #151820;
+}
+
+.card-img-top {
+  height: 200px;
+  width: 200px;
+}
+
+/* ==== Footer ==== */
+footer {
+  background: #0c0e13;
+  color: #999;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  border-top: 1px solid #1c2029;
+}
+
+/* ==== Animations ==== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
