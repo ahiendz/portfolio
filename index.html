@@ -1,172 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ly Anh Hiển | Portfolio</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Titillium+Web:wght@200;300;400;600;700&family=Share+Tech+Mono&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Titillium+Web:wght@300;400;600&display=swap"
         rel="stylesheet">
-    <!-- AOS Animation Library -->
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"> -->
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-    <title>Ly Anh Hien | Forfolio</title>
+
+    <!-- thêm js -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="assets\img\logo.jpg" alt="Logo" width="70" class="d-inline-block align-text-top">
-                Anh Hien
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <img src="assets/img/logo.jpg" class="logo-hover me-2" width="55" alt="Logo">
+                <span class="brand-text">Anh Hiển</span>
             </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">SKILLS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">PROJECTS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">CONTACT</a>
-                    </li>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="col-lg-6">
-        <div class="hero-content" id="#about">
-            <h1>
-                Hello, I'm<br>
-                <span>Anh Hien</span>
-            </h1>
-            <p id="typing-text"></p> # typing text effect
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eaque quod, veritatis, in culpa odit
-                provident sunt nisi debitis reprehenderit ullam perferendis repellat. A error magnam soluta, laborum
-                iusto dolorum?</p>
-            <div class="skills">
-                <span class="badge rounded-pill text-bg-dark">Python</span>
-                <span class="badge rounded-pill text-bg-dark">Javascript</span>
-                <span class="badge rounded-pill text-bg-dark">Bootstrap</span>
-                <span class="badge rounded-pill text-bg-dark">React</span>
-            </div>
-            <div class="hero-buttons d-flex gap-3">
-                <a href="#contact" class="btn-cyber">Contact Me</a>
-                <a href="#resume" class="btn-outline">My Resume</a>
-            </div>
-            <div>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-discord"></i></a>
-                <a href="#"><i class="fab fa-telegram"></i></a>
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-text">
+                    <h1>Xin chào, mình là <br><span>Ly Anh Hiển</span></h1>
+                    <p class="subtitle">Junior Developer | STEM Enthusiast</p>
+                    <p class="typewriter">
+                        <span id="motto"></span><span class="cursor">|</span>
+                    </p>
+
+                    <div class="skills mb-4">
+                        <span class="badge">Python</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">Html</span>
+                        <span class="badge">Bootstrap</span>
+                    </div>
+
+                    <div class="d-flex gap-3">
+                        <a href="#contact" class="btn-cyber">Liên hệ</a>
+                        <a href="#about" class="btn-outline">Xem CV</a>
+                    </div>
+
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <img src="assets/img/avata.jpg" alt="Anh Hiển" class="hero-img">
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2 class="glitch-effect" data-text="About Me">About Me</h2>
-                <p>Learn more about me – my background, personal insights, passions, and the drive that keeps me from
-                    giving up.</p>
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section about-section">
+        <div class="container text-center">
+            <h2 class="section-title">ABOUT ME</h2>
+            <p class="section-desc">Learn more about me – my background, personal insights, passions, and the drive that
+                keeps me from giving up.</p>
+
+            <div class="cyber-box mx-auto mt-4">
+                <div class="cyber-box-inner">
+                    <div class="row">
+                        <!-- Personal Info -->
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <div class="about-block">
+                                <div class="about-header">
+                                    <i class="fas fa-user about-icon"></i>
+                                    <h3>Personal Info</h3>
+                                </div>
+                                <ul class="about-list">
+                                    <li><i class="fas fa-id-card"></i> <span>Name:</span> Ly Anh Hien</li>
+                                    <li><i class="fas fa-phone"></i> <span>Phone:</span> +84 937 591 227</li>
+                                    <li><i class="fab fa-telegram"></i> <span>Telegram:</span> @ahiendz</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Professional Info -->
+                        <div class="col-md-6">
+                            <div class="about-block">
+                                <div class="about-header">
+                                    <i class="fas fa-briefcase about-icon"></i>
+                                    <h3>Professional Info</h3>
+                                </div>
+                                <ul class="about-list">
+                                    <li><i class="fab fa-github"></i> <span>GitHub:</span> ahiendz</li>
+                                    <li><i class="fas fa-map-marker-alt"></i> <span>Location:</span> HCMC, Vietnam</li>
+                                    <li><i class="fas fa-language"></i> <span>Languages:</span> Vietnamese, English</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download CV button -->
+                    <div class="text-center mt-4">
+                        <a href="assets/docs/EBOOK 50 BÀI TOÁN TRỌNG TÂM CHƯƠNG 1 - TOÁN 9.pdf" class="btn-cv"
+                            target="_blank">
+                            <i class="fas fa-download"></i> DOWNLOAD CV
+                        </a>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="cyber-box" data-aos="fade-up">
-                        <div class="cyber-box-inner about-content">
-                            <div class="cyber-box-corners">
-                                <div class="cyber-corner corner-tl"></div>
-                                <div class="cyber-corner corner-tr"></div>
-                                <div class="cyber-corner corner-bl"></div>
-                                <div class="cyber-corner corner-br"></div>
-                            </div>
-                            <div class="row about-row">
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="about-block">
-                                        <div class="about-block-header">
-                                            <i class="fas fa-user-circle about-icon"></i>
-                                            <h3>Personal Info</h3>
-                                        </div>
-                                        <div class="about-block-content">
-                                            <div class="info-list">
-                                                <div class="info-item">
-                                                    <div class="info-item-label">
-                                                        <i class="fas fa-id-card"></i>
-                                                        <span>Name</span>
-                                                    </div>
-                                                    <div class="info-item-value">Ly Anh Hien</div>
-                                                </div>
-                                                <div class="info-item">
-                                                    <div class="info-item-label">
-                                                        <i class="fas fa-phone"></i>
-                                                        <span>Phone</span>
-                                                    </div>
-                                                    <div class="info-item-value">+84 937 591 227</div>
-                                                </div>
-                                                <div class="info-item">
-                                                    <div class="info-item-label">
-                                                        <i class="fab fa-telegram"></i>
-                                                        <span>Telegram</span>
-                                                    </div>
-                                                    <div class="info-item-value">@ahiendz</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="about-block">
-                                        <div class="about-block-header">
-                                            <i class="fas fa-briefcase about-icon"></i>
-                                            <h3>Professional Info</h3>
-                                        </div>
-                                        <div class="about-block-content">
-                                            <div class="info-list">
-                                                <div class="info-item">
-                                                    <div class="info-item-label">
-                                                        <i class="fab fa-github"></i>
-                                                        <span>GitHub</span>
-                                                    </div>
-                                                    <div class="info-item-value">ahiendz</div>
-                                                </div>
-                                                <div class="info-item">
-                                                    <div class="info-item-label">
-                                                        <i class="fas fa-map-marker-alt"></i>
-                                                        <span>Location</span>
-                                                    </div>
-                                                    <div class="info-item-value">HCMC, Vietnam</div>
-                                                </div>
-                                                <div class="info-item">
-                                                    <div class="info-item-label">
-                                                        <i class="fas fa-language"></i>
-                                                        <span>Languages</span>
-                                                    </div>
-                                                    <div class="info-item-value">Vietnamese, English</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section bg-dark-alt">
+        <div class="container text-center">
+            <h2 class="section-title">Tech Stack</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-6 col-md-3">
+                    <div class="card skill-card">
+                        <img src="assets/logo/html.svg" alt="HTML">
+                        <p>HTML</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card skill-card">
+                        <img src="assets/logo/css.svg" alt="CSS">
+                        <p>CSS</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card skill-card">
+                        <img src="assets/logo/javascript.svg" alt="JS">
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card skill-card">
+                        <img src="assets/logo/Python.svg" alt="Python" width="100">
+                        <p>Python</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section">
+        <div class="container text-center">
+            <h2 class="section-title">Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="assets/img/to_do_list.png" class="card-img-top" alt="To-Do App">
+                        <div class="card-body">
+                            <h5 class="card-title">To-Do List App</h5>
+                            <p class="card-text">Ứng dụng quản lý công việc với Pomodoro Timer.</p>
+                            <a href="https://github.com/ahiendz/To-do-list"
+                                class="btn btn-outline-light btn-sm">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="assets/img/school.png" class="card-img-top" alt="School Manager">
+                        <div class="card-body">
+                            <h5 class="card-title">School Management System</h5>
+                            <p class="card-text">Quản lý lớp, giáo viên, học sinh và điểm số.</p>
+                            <a href="https://github.com/ahiendz/School-Management-System"
+                                class="btn btn-outline-light btn-sm">Details</a>
                         </div>
                     </div>
                 </div>
@@ -174,149 +205,54 @@
         </div>
     </section>
 
-    <!-- Nav Tabs -->
-    <ul class="nav nav-pills mb-3 justify-content-center" id="portfolioTabs" role="tablist">
-        <li class="nav-item" role="presentation" id="#projects">
-            <button class="nav-link active" id="projects-tab" data-bs-toggle="pill" data-bs-target="#projects"
-                type="button" role="tab">
-                Projects
-            </button>
-        </li>
-        <li class="nav-item" role="presentation" id="#skills">
-            <button class="nav-link" id="tech-tab" data-bs-toggle="pill" data-bs-target="#tech" type="button"
-                role="tab">
-                Tech Stack
-            </button>
-        </li>
-    </ul>
-
-    <!-- Tab Content -->
-    <div class="tab-content" id="portfolioTabsContent">
-
-        <!-- Projects Tab -->
-        <div class="tab-pane fade show active" id="projects" role="tabpanel">
+    <!-- ===== CERTIFICATES ===== -->
+    <section id="certificates" class="section bg-dark-alt">
+        <div class="container text-center">
+            <h2 class="section-title">Certificates</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card bg-dark text-white p-3 h-100">
-                        <h5 class="card-title">To do list</h5>
-                        <p class="card-text">Ứng dụng quản lí tasks</p>
-                        <a href="#" class="btn btn-outline-light btn-sm">Details</a>
+                    <div class="card cert-card">
+                        <i class="fas fa-trophy"></i>
+                        <h5>Giải Nhất VioEdu Toán</h5>
+                        <p>Thành tích nổi bật trong học tập.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card bg-dark text-white p-3 h-100">
-                        <h5 class="card-title">School Management System</h5>
-                        <p class="card-text">Ứng dụng quản lí trường học</p>
-                        <a href="#" class="btn btn-outline-light btn-sm">Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tech Stack Tab -->
-        <div class="tab-pane fade" id="tech" role="tabpanel">
-            <div class="row g-4">
-                <div class="col-6 col-md-3">
-                    <div class="card bg-dark text-white text-center p-3">
-                        <img src="assets\logo\plex-html5-icon-png-icon-thumbnail.jpg" class="card-img-top" alt="HTML">
-                        <p class="mt-2">HTML</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="card bg-dark text-white text-center p-3">
-                        <img src="assets\logo\css.jpg" class="card-img-top" alt="CSS">
-                        <p class="mt-2">CSS</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <section id="contact" class="contact section">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2 class="glitch-effect" data-text="Contact Me">Contact Me</h2>
-                <p>Let's connect! Feel free to reach out through any of these channels.</p>
-            </div>
-
-            <div class="row justify-content-center" data-aos="fade-up">
-                <div class="col-lg-10">
-                    <div class="contact-methods">
-                        <div class="contact-box">
-                            <div class="contact-box-inner">
-                                <i class="fab fa-github"></i>
-                                <h4>GitHub</h4>
-                                <a href="https://github.com/LePhiAnhDev" target="_blank">ahiendz</a>
-                            </div>
-                        </div>
-
-                        <div class="contact-box">
-                            <div class="contact-box-inner">
-                                <i class="fab fa-telegram"></i>
-                                <h4>Telegram</h4>
-                                <a href="https://t.me/lephianh386ht">@ahiendz</a>
-                            </div>
-                        </div>
-
-                        <div class="contact-box">
-                            <div class="contact-box-inner">
-                                <i class="fab fa-discord"></i>
-                                <h4>Discord</h4>
-                                <a href="#">ahiendz</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-10" data-aos="fade-up" data-aos-delay="200">
-                    <div class="cyber-box contact-form">
-                        <div class="cyber-box-inner contact-form-inner">
-                            <div class="cyber-box-corners">
-                                <div class="cyber-corner corner-tl"></div>
-                                <div class="cyber-corner corner-tr"></div>
-                                <div class="cyber-corner corner-bl"></div>
-                                <div class="cyber-corner corner-br"></div>
-                            </div>
-                            <form id="contact-form">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <input type="text" name="name" id="name" class="form-control"
-                                            placeholder="Your Name" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="email" name="email" id="email" class="form-control"
-                                            placeholder="Your Email" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <input type="text" name="subject" id="subject" class="form-control"
-                                            placeholder="Subject" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <textarea name="message" id="message" class="form-control"
-                                            placeholder="Your Message" required></textarea>
-                                    </div>
-                                    <div class="col-12 mt-3">
-                                        <button type="submit" class="btn-cyber w-100">Send Message</button>
-                                    </div>
-                                    <div class="col-12 mt-3">
-                                        <div id="form-status" class="text-center" style="display: none;"></div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                    <div class="card cert-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h5>Đại diện thi HSG máy tính cầm tay</h5>
+                        <p>Được chọn làm gương mặt đại diện của trường.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section">
+        <div class="container text-center">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-8">
+                    <div class="contact-box">
+                        <form>
+                            <input type="text" class="form-control" placeholder="Tên của bạn" required>
+                            <input type="email" class="form-control" placeholder="Email" required>
+                            <textarea class="form-control" placeholder="Nội dung..." required></textarea>
+                            <button class="btn-cyber mt-3 w-100">Gửi tin nhắn</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 Anh Hien. All rights reserved.</p>
-            </div>
-        </div>
+        <p>&copy; 2025 Ly Anh Hiển | All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
