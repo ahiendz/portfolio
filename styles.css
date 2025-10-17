@@ -404,9 +404,7 @@ footer {
   align-items: center;
   gap: 3px;
   min-width: 400px;
-  /* ✅ giữ nguyên độ rộng tối thiểu */
   min-height: 1.8em;
-  /* ✅ giữ chiều cao chữ, không co lại */
   line-height: 1.8em;
 }
 
